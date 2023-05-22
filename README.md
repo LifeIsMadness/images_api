@@ -31,6 +31,8 @@ $ uvicorn main:app --reload
 ```
 
 Testing:
+
+PS: preferable if you have a running instance of mongodb(locally or via Docker)
 ```bash
 # run lint
 $ make linting

@@ -18,6 +18,7 @@ dependencies = [
 dev = [
     "ipython",
 
+    "pytest-mongodb",
     "pytest-deadfixtures",
     "pytest-env",
     "pytest-freezegun",
