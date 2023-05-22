@@ -14,7 +14,7 @@ class ImageDAO(DAOBase):
         """
         Returns True if update operation was successfull(even if same values)
         """
-        query = {"_id": ObjectId(image_id)}, {"$set": {"status": "new"}}
+        query = {"_id": ObjectId(image_id)}, {"$set": kwargs}
         result = self.db[self.DATA_COLLECTION_NAME].update_one(*query)
 
         return result.matched_count > 0
