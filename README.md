@@ -29,8 +29,10 @@ $ export MONGODB_URL=<your_mongodb_url>
 $ cd src
 $ uvicorn main:app --reload
 ```
+Swagger:
+http://127.0.0.1:8000/docs
 
-Testing:
+### Testing:
 
 PS: preferable if you have a running instance of mongodb(locally or via Docker)
 ```bash
