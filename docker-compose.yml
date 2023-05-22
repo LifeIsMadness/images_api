@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  web:
+    container_name: api
+    build: 
+      context: .
+      args:
+        REQUIREMENTS_FILE: requirements.txt
+    command: >
+      bash -c "uvicorn src.main:app --host 0.0.0.0 --port 8000"
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_URL=mongodb://admin:you_cannot_guess@mongodb:27017/
+    depends_on:
+      - mongodb
+
+  mongodb:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=you_cannot_guess
+    volumes:
+      - dbdata:/data/db
+
+volumes:
+  dbdata:
