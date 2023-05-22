@@ -1,0 +1,24 @@
+[
+  {
+    "_id": {"$oid": "61fbaf25671c45f3f5f4074a" },
+    "url": "www.img.com",
+    "createdAt": {"$date": "2023-05-21T00:00:00Z" },
+    "status": "new",
+    "groupId": {"$oid": "61fbaf25671c45f3f5f4074a" }
+  },
+  {
+    "_id": {"$oid": "61fbaf25671c45f3f5f4074b" },
+    "url": "www.hhhzzz.com",
+    "createdAt": {"$date": "2023-05-21T00:00:00Z" },
+    "status": "new",
+    "groupId": {"$oid": "61fbaf25671c45f3f5f4074a" }
+  },
+  {
+    "_id": {"$oid": "61fbaf25671c45f3f5f4074c" },
+    "url": "www.wtf.com",
+    "createdAt": {"$date": "2023-05-21T00:00:00Z" },
+    "status": "accepted",
+    "groupId": {"$oid": "61fbaf25671c45f3f5f4074b" }
+  }
+
+]

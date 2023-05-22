@@ -1,0 +1,14 @@
+[
+  {
+    "_id": {"$oid": "61fbaf25671c45f3f5f4074a" },
+    "name": "group1"
+  },
+  {
+    "_id": {"$oid": "61fbaf25671c45f3f5f4074b" },
+    "name": "group2"
+  },
+  {
+    "_id": {"$oid": "61fbaf25671c45f3f5f4074c" },
+    "name": "group3"
+  }
+]
