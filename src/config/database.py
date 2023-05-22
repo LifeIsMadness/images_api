@@ -6,7 +6,7 @@ import pymongo
 if TYPE_CHECKING:
     from pymongo.database import Database
 
-client = pymongo.MongoClient(os.getenv("MONGODB_URL"))
+client: pymongo.MongoClient = pymongo.MongoClient(os.getenv("MONGODB_URL"))
 
 
 def get_db() -> "Database":

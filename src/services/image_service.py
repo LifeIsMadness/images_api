@@ -1,4 +1,5 @@
-from datetime import datetime, timedelta
+from datetime import datetime
+from datetime import timedelta
 
 from fastapi import HTTPException
 from pymongo.database import Database
@@ -47,10 +48,10 @@ class ImageStats(BaseService):
             },
             {
                 "$project": {"_id": 0, "status": "$_id", "count": 1},
-            }
+            },
         ]
         result = {}
-        for dict_ in ImageDAO(self.db).aggregate(pipeline=pipeline):
+        for dict_ in ImageDAO(self.db).aggregate(pipeline=pipeline):  # type: ignore[arg-type]
             result[dict_["status"]] = dict_["count"]
 
         return result

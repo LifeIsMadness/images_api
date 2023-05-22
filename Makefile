@@ -17,7 +17,7 @@ clean-code:
 
 linting:
 	flake8 src
-	cd src && mypy
+	cd src && mypy .
 
 test:
 	cd src && pytest --dead-fixtures

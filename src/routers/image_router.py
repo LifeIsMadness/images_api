@@ -2,10 +2,11 @@ from fastapi import APIRouter
 
 from routers.dependencies import DatabaseAnnotated
 from schemas.image import ImageUpdateSchema
-from services.image_service import ImageUpdater, ImageStats
+from services.image_service import ImageStats
+from services.image_service import ImageUpdater
 
 router = APIRouter(
-    prefix="/images",
+    prefix="/api/v1/images",
     tags=["images"],
 )
 
@@ -17,5 +18,4 @@ def get_image_stats(db: DatabaseAnnotated):
 
 @router.patch("/{image_id}", response_model=ImageUpdateSchema)
 def update_image(image_id: str, image: ImageUpdateSchema, db: DatabaseAnnotated):
-    updated_image = ImageUpdater(db, image_id, image)()
-    return updated_image
+    return ImageUpdater(db, image_id, image)()
