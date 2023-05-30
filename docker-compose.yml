@@ -8,7 +8,7 @@ services:
       args:
         REQUIREMENTS_FILE: requirements.txt
     command: >
-      bash -c "uvicorn src.main:app --host 0.0.0.0 --port 8000"
+      bash -c "cd src && uvicorn src.main:app --host 0.0.0.0 --port 8000"
     ports:
       - "8000:8000"
     environment:
